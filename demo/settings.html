@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
+        <link href='settings.css' rel="stylesheet"/>
+        <title>Title</title>
+    </head>
+    <body>
+        <header>
+            <section>
+                <div>C O N F I G</div>
+                <img src="comp4.gif">
+            </section>
+        </header>
+        <main>
+            <button type="button" class="collapsible">
+                <div class="coll-cont">
+                    <form>
+                        <input type="text" value="u s e r n a m e"/>
+                    </form>
+                    <div>
+                        Open Collapsible
+                    </div>
+                </div>
+            </button>
+            <div class="content">
+            <p>Lorem ipsum...</p>
+            </div>
+        </main>
+        <footer>
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                    content.style.display = "none";
+                    } else {
+                    content.style.display = "block";
+                    }
+                });
+                }
+            </script>
+        </footer>
+    </body>
+</html>
